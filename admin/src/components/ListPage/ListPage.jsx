@@ -99,7 +99,7 @@ function getSortedScheduleDates(scheduleLike) {
 /* --------------------------------------------------------------------- */
 
 export default function AnimatedDoctorListResponsive({ apiBase }) {
-  const API_BASE = apiBase || "https://medicare-backend-40yz.onrender.com";
+  const API_BASE = apiBase || "https://medicare-backend-9r7t.onrender.com";
 
   const [doctors, setDoctors] = useState([]);
   const [expanded, setExpanded] = useState(null);

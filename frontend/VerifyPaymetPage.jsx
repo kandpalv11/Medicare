@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const API_BASE = "https://medicare-backend-40yz.onrender.com";
+const API_BASE = "https://medicare-backend-9r7t.onrender.com";
 
 const VerifyPaymentPage = () => {
   const location = useLocation();
