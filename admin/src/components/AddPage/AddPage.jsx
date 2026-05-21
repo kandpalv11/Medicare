@@ -444,16 +444,13 @@ export default function DoctorDetailPage() {
               const n = Number(v);
               if (Number.isNaN(n)) return;
 
-              // clamp between 1 and 5
-              const clamped = Math.max(1, Math.min(5, n));
-
-              // keep only 1 decimal place
+              const clamped = Math.max(1, Math.min(5, n))
               const fixed = Math.round(clamped * 10) / 10;
 
               setForm((p) => ({ ...p, rating: fixed.toString() }));
             }}
             onBlur={() => {
-              // force 1 decimal place on blur
+      
               setForm((p) => {
                 if (!p.rating) return p;
                 const n = Number(p.rating);

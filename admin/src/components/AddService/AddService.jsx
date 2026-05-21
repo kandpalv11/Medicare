@@ -90,9 +90,7 @@ export default function AddService({ apiBase, serviceId }) {
     if (Number(slotDay) > daysInSelectedMonth) {
       setSlotDay(String(daysInSelectedMonth));
     }
-    // if user selected a year/month that is earlier than today (shouldn't happen since we disable),
-    // ensure the day is at least today's date for the same month/year
-    // (we mostly rely on disabling month/day options below)
+  
   }, [slotMonth, slotYear, daysInSelectedMonth]); // eslint-disable-line
 
   // ----- Fetch service when editing -----
