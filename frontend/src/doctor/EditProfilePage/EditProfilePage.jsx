@@ -24,7 +24,7 @@ import { editProfilePageStyles, iconSize } from "../../assets/dummyStyles";
 
 const STORAGE_KEY = "doctorToken_v1";
 
-/* ----------------- helpers ----------------- */
+
 function parse12HourTimeToMinutes(t) {
   if (!t) return 0;
   const [time, ampm] = t.split(" ");
@@ -55,7 +55,7 @@ function dedupeAndSortSchedule(schedule = {}) {
   return out;
 }
 
-/* ----------------- main component ----------------- */
+
 export default function EditProfilePage({ apiBase }) {
   const { id } = useParams(); // expects route like /doctor-edit/:id
   const navigate = useNavigate();
@@ -205,7 +205,7 @@ export default function EditProfilePage({ apiBase }) {
     }
   };
 
-  /* ---------- save to backend ---------- */
+ 
   const handleSave = async () => {
     if (!doc) return;
     setSaveMessage({ type: "saving", text: "Saving profile..." });
@@ -214,7 +214,7 @@ export default function EditProfilePage({ apiBase }) {
     try {
       const form = new FormData();
 
-      // append updatable fields
+   
       const updatable = [
         "name",
         "specialization",
@@ -273,7 +273,6 @@ export default function EditProfilePage({ apiBase }) {
     }
   };
 
-  /* ---------- UI field configs ---------- */
   const fieldConfigs = doc
     ? [
         {
@@ -343,7 +342,6 @@ export default function EditProfilePage({ apiBase }) {
       ]
     : [];
 
-  /* ---------- render ---------- */
   if (loading) {
     return (
       <div className={styles.loadingContainer}>
@@ -814,7 +812,6 @@ export default function EditProfilePage({ apiBase }) {
   );
 }
 
-/* ---------- Helper components ---------- */
 function AddDate({ onAdd }) {
   const styles = editProfilePageStyles;
   const [value, setValue] = useState("");
