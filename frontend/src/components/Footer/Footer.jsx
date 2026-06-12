@@ -59,7 +59,7 @@ const Footer = () => {
       Icon: Linkedin,
       color: footerStyles.linkedinColor,
       name: "LinkedIn",
-      href: "https://www.linkedin.com/in/vivek-kandpal-2395a6298?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      href: "https://www.linkedin.com/in/vivekkandpal/",
     },
     {
       Icon: Youtube,
